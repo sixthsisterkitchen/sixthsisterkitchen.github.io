@@ -22,7 +22,8 @@
 						<div class="content">
 							<h1>陸姐手工水餃&nbsp;</h1>
 							<p class="major">家中我排行老六，所以被稱為“陸姐（六姐）”。 豬肉是品冠現代畜產（養豬人家）的"陽光豬肉"，食安嚴格把關。 採用新鮮可口高麗菜， 泡菜採用金媽媽泡菜， 蝦仁取41/50規格的白蝦仁。 純手工，為保持鮮度，訂單確定後需要3天至一週的工作時間，請嘗鮮，謝謝！</p>
-							<p style="color:red;">鹹豬肉 粽子 餛飩 coming soon~</p>
+							<p style="color:blue;">物價上漲關係，故暫不販售蝦仁水餃以及蝦仁千張，其餘水餃每顆調漲0.5元</p>
+                            <p style="color:red;">鹹豬肉 粽子 餛飩 coming soon~</p>
                             <ul class="actions stacked">
 							  <li><a href="#first" class="button big wide smooth-scroll-middle">訂購&nbsp;</a></li>
                             </ul>
@@ -36,7 +37,7 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>訂購手工水餃</h2>
-							<p>★豬肉是採用品冠現代畜產陽光豬肉<br>蝦仁豬肉水餃一顆8元，其餘手工水餃一顆3.5元。</p>
+							<p>★豬肉是採用品冠現代畜產陽光豬肉<br>手工水餃一顆4元。</p>
 							<table>
 								<tr>
 									<th>品項</th>
@@ -163,7 +164,7 @@
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>訂購手工千張</h2>
-							<p>★豬肉是採用品冠現代畜產陽光豬肉<br>蝦仁豬肉千張一顆12元，其餘手工千張一顆6元。</p>
+							<p>★豬肉是採用品冠現代畜產陽光豬肉<br>手工千張一顆6元。</p>
 							<table>
 								<tr>
 									<th>品項</th>
@@ -352,7 +353,7 @@
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<p>陸姐手工水餃訂購網 ver 1.7.3</p>
+							<p>陸姐手工水餃訂購網 ver 1.8</p>
 							<p>Line帳號：@815wojar</p>
 							<p>手機號碼：0937216507</p>
 						</div>
@@ -376,14 +377,14 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
 		var item = [
-		["高麗菜豬肉水餃",170,100],
-		["韮菜豬肉水餃",170,100],
-		["玉米豬肉水餃",170,100],
-		["泡菜豬肉水餃",170,100],
-		["青蔥豬肉水餃",170,100],
+		["高麗菜豬肉水餃",200,120],
+		["韮菜豬肉水餃",200,120],
+		["玉米豬肉水餃",200,120],
+		["泡菜豬肉水餃",200,120],
+		["青蔥豬肉水餃",200,120],
 		["蝦仁豬肉水餃",400,240],
-		["素食高麗菜水餃",170,100],
-		["素食泡菜水餃",170,100],
+		["素食高麗菜水餃",200,120],
+		["素食泡菜水餃",200,120],
 		["千張高麗菜豬肉",120,0],
 		["千張韮菜菜豬肉",120,0],
 		["千張玉米豬肉 ",120,0],
@@ -507,6 +508,9 @@
             
             for(var j = 0; j<listLength; j++){      //Big
                 var select = document.getElementById(itemBig[j]);
+                if(j==5||j==13){    //蝦仁水餃只有0選項
+                    continue;
+                }
                 for (var i = min; i<=max; i++){
                     var opt = document.createElement('option');
                     opt.value = i;
@@ -517,6 +521,9 @@
             
             for(var j = 0; j<=7; j++){      //Small
                 var select = document.getElementById(itemSmall[j]);
+                if(j==5||j==13){    //蝦仁水餃只有0選項
+                    continue;
+                }
                 for (var i = min; i<=max; i++){
                     var opt = document.createElement('option');
                     opt.value = i;
